@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Chat App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+<!--  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans'> -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <div id="chatarea">
+
+  	<div id="chatareaTop">
+
+      <div class="contactHead">
+        <img src="img\12189797440.jpg" alt="" class="contact__photo" />
+        <span class="contactHead__name">Albert</span>
+      </div>
+  	</div>
+
+
+  <ol class='chat-box'>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>hi how are you. When you come to home.</p>
+        <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+      </div>
+    </li>
+    <li class='me'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>Hi  bro.</p>
+        <time datetime='2009-11-13T20:14'>37 mins</time>
+      </div>
+    </li>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>hi happy to welcome you.</p>
+      </div>
+      <li class='another'>
+        <div class='avatar-icon'>
+          <img src='img\12189797440.jpg'>
+        </div>
+        <div class='messages'>
+          <p>hi how are you. When you come to home.</p>
+          <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+        </div>
+      </li>
+      <li class='me'>
+        <div class='avatar-icon'>
+          <img src='img\12189797440.jpg'>
+        </div>
+        <div class='messages'>
+          <p>Hi  bro.</p>
+          <time datetime='2009-11-13T20:14'>37 mins</time>
+        </div>
+      </li>
+      <li class='another'>
+        <div class='avatar-icon'>
+          <img src='img\12189797440.jpg'>
+        </div>
+        <div class='messages'>
+          <p>hi happy to welcome you.</p>
+        </div>
+      </li>
+    </li>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>hi how are you. When you come to home.</p>
+        <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+      </div>
+    </li>
+    <li class='me'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>Hi  bro.</p>
+        <time datetime='2009-11-13T20:14'>37 mins</time>
+      </div>
+    </li>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>hi happy to welcome you.</p>
+      </div>
+    </li>
+
+    <li class='me'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>I will come and pickup you.</p>
+        <time datetime='2009-11-13T20:14'>37 mins</time>
+      </div>
+    </li>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>i will not know exact time i come arround 8'O colock </p>
+        <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+      </div>
+    </li>
+    <li class='me'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>I will come and pickup you.</p>
+        <time datetime='2009-11-13T20:14'>37 mins</time>
+      </div>
+    </li>
+    <li class='another'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>i will not know exact time i come arround 8'O colock </p>
+        <time datetime='2009-11-13T20:00'>Timothy • 51 min</time>
+      </div>
+    </li>
+    <li class='me'>
+      <div class='avatar-icon'>
+        <img src='img\12189797440.jpg'>
+      </div>
+      <div class='messages'>
+        <p>I will come and pickup you.</p>
+        <time datetime='2009-11-13T20:14'>37 mins</time>
+      </div>
+    </li> </hr>
+  </ol>
+  <div class="chat__input">
+  <input type="text" class="chat__input" placeholder="Type a message..." />
+  </div>
+</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+  <script>
+socket=io.connect('http://127.0.0.1:8080')
+  socket.on('output', function(data){
+console.log(data);
+  });
+
+    </script>
+</body>
+
+
+</html>

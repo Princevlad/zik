@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html  ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login to Nackchat</title>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/angular.min.js"></script>
+               <script src="js/app.js"></script>
+               <script src="/socket.io/socket.io.js"></script>
+                    <script src="js/postController.js"></script>
+                    <script src='js/jquery.min.js'></script>
+                   <script src="js/indexLog.js"></script>
+            <link rel="stylesheet" href="/css/styleLog.css">
+
+
+
+  </head>
+
+  <body>
+    <div>
+    <div>
+      <h1>Add User</h1>
+      <form name="userForm" ng-submit="submitForm()">
+
+        <input type="text" name="username" value="prince" ng-model="username">
+
+          <button type="submit" class="btn btn-primary">Add Friend</button>
+
+      </form>
+    </div>
+    <div>
+      <h1>Accept Request</h1>
+      <p  ng-model="username"> {{Rusername}} sent you a request </p>
+
+      <button ng-click="ignore()">Ignore</button>
+      <button ng-click="accept()">Accept</button>
+
+    </div>
+
+    </div>
+  </body>
+</html>

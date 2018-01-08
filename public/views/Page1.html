@@ -1,0 +1,38 @@
+<div>
+  <div>
+    <h2>Add User</h2>
+    {{5*5}}
+    {{test}}
+    <form name="userForm" >
+
+      <input type="text" name="username" value="prince" ng-model="username">
+
+        <button ng-click="AddFriend(username)" class="btn btn-primary">Add Friend</button>
+
+    </form>
+    <button ng-click="Push()" class="btn btn-primary">Add Friend</button>
+  </div>
+    <h1>Accept Request</h1 >
+  <div ng-repeat="request in FRequest">
+
+    <p> {{request}} sent you a request </p>
+<form>
+
+
+    <button ng-click="Ignore(request)">Ignore</button>
+    <button ng-click="Accept(request)">Accept</button>
+</form>
+
+  </div> <hr/>
+
+  <div ng-repeat="frnd in List" >
+
+    <a href="#/Chat/{{frnd.Id}}" >{{frnd.username}} </a>
+
+    <p>
+
+    </p>
+
+
+  </div>
+</div>

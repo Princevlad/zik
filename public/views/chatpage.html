@@ -1,0 +1,48 @@
+<h1>Chatter</h1>
+
+<div class='container'>
+  <div >
+    {{chathead}}
+    Chat <span ng-bind="nickName"></span><hr/>
+    <div class='row'>
+      <div class='col-md-9'>
+      <div class="chatbox" style="width: 100%; overflow-y: auto; height: 200px" border="solid"  >
+        <div ng-repeat="chat in List">
+          <div>
+          <code>  {{chat.senderHome}}  </code>     <code>  {{chat.msgstatusHome}}  </code>
+          <h4>  {{chat.messageHome}}  </h4>
+          </div>
+
+          <div ng-if="chat.sender.length>0">
+          <code>  {{chat.sender}}  </code >     <code>  {{chat.msgstatus}}  </code>
+          <h4>  {{chat.message}}  </h4>
+        </div>
+
+
+      </div> <hr/>
+      </div>
+    </div>
+    <div class='row'>
+      &nbsp;
+    </div>
+    <div class='row'>
+      <div class='col-md-8'>
+        <form role='form' novalidate name='form'>
+          <div class='form-group'>
+            <input type='text' style='width: 80%'
+            required
+            ng-max='50'
+            ng-model='message'
+            ng-change="IsTyping()"
+            focus>
+            <button class='btn btn-sm btn-primary'
+              ng-enable='form.$valid'
+              ng-click="sendMessage(message)">Send!</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>

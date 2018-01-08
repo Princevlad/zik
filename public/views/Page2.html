@@ -1,0 +1,20 @@
+<div ng-repeat="x in images">
+
+
+  	<img ng-src="photos/{{x.name}}"  alt="Model" />
+
+
+  	<div class="button-holder">
+  		<form >
+  			<input type="submit" value="Cute!"  ng-click="cute(x)"/>
+        <p id="up" >{{x.likes}}</p>
+  		</form>
+  		<form >
+  			<input type="submit" value="Not Cute!" ng-click="notcute(x)" />
+        <p id="down" >{{x.dislikes}}</p>
+  		</form>
+
+  	</div>
+
+
+</div>
